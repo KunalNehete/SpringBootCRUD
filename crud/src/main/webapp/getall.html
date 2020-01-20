@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get All Hospitals</title>
+</head>
+
+<body>
+
+	<h5>Hospital List</h5>
+	<div ng-controller="getcontroller">
+		<div>
+
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading">
+					<span class="lead">List of Hospitals </span>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive" ng-init="response = getfunction()">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>NAME</th>
+									<th>CITY</th>
+									<th>RATING</th>
+									<th width="100"></th>
+									<th width="100"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="h in response track by $index">
+									<td>{{h.id}}</td>
+									<td>{{h.name}}</td>
+									<td>{{h.city}}</td>
+									<td>{{h.rating}}</td>
+									<td><button type="button" ng-click="editHosp(h.id)"
+											class="btn btn-success custom-width">Edit</button></td>
+									<td><button type="button" ng-click="removeHosp(h.id)"
+											class="btn btn-danger custom-width">Remove</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>
