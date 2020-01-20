@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleApp">
+
+<head>
+
+<title>AngularJS Routing example</title>
+
+<script type="text/javascript" src="./resources/angular.min.js"></script>
+<script type="text/javascript" src="./resources/angular-route.min.js"></script>
+<script type="text/javascript" src="./resources/jquery.min.js"></script>
+<script type="text/javascript" src="./resources/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./resources/bootstrap.min.css">
+<script type="text/javascript" src="./js/app.js"></script>
+
+</head>
+
+<body>
+
+	<!-- GET: Header partial -->
+	<div ng-include="'./header.html'"></div>
+
+	<div ng-view></div>
+
+	<!-- 	<div ng-show="isLoading">
+		<div class="loading_poppup_overlay"></div>
+		<div class="loading_poppup_content">
+
+			Request is in progress. Please
+			wait...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img
+				src="./images/loading.gif" />
+		</div>
+	</div> -->
+
+</body>
+
+</html>
